@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#01AEFD</color>
+    <color name="theme_color">#01AEFD</color>
 </resources>
