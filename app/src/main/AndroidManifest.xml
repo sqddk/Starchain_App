@@ -33,12 +33,12 @@
 
         <activity
             android:name="com.yalantis.ucrop.UCropActivity"
-            android:screenOrientation="fullSensor"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
 
         <activity android:name=".activity.LoginActivity"
             android:exported="true"
-            android:screenOrientation="fullSensor"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.Starchain">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

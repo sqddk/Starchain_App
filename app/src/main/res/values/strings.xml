@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Starchain</string>
+    <string name="span_service">https://my-website-1gio2i63a7b031dd-1311769384.ap-shanghai.app.tcloudbase.com/service</string>
+    <string name="span_information">https://my-website-1gio2i63a7b031dd-1311769384.ap-shanghai.app.tcloudbase.com/information</string>
 </resources>

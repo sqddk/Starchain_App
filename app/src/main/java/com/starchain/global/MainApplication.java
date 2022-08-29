@@ -5,6 +5,8 @@ import android.app.Application;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import com.kongzue.dialogx.DialogX;
+import com.kongzue.dialogx.style.MIUIStyle;
 import com.starchain.network.HttpsClient;
 
 public class MainApplication extends Application {
@@ -13,6 +15,11 @@ public class MainApplication extends Application {
     public void onCreate() {
         super.onCreate();
         this.initAllGlobalMembers();
+
+        DialogX.init(this);
+        DialogX.globalStyle = new MIUIStyle();
+        DialogX.implIMPLMode= DialogX.IMPL_MODE.DIALOG_FRAGMENT;
+
         this.initBackgroundCallBack();
     }
 

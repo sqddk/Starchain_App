@@ -22,7 +22,7 @@ public class ConfigureManager {
     private ConfigureManager(){
         this.loadConfig();
     }
-    private static final String NATIVE_CONFIGURE_PATH = "";
+    private static final String NATIVE_CONFIGURE_PATH = "data/data/com.starchain/config.json";
     private JSONObject config;
 
     /**
@@ -66,7 +66,7 @@ public class ConfigureManager {
      * @param key 配置项的键
      * @return 配置项的值
      */
-    public String getConfig(String key){
+    public String getValue(String key){
         return this.config.getString(key);
     }
 
@@ -75,7 +75,7 @@ public class ConfigureManager {
      * @param key 配置项的键
      * @param value 配置项的值
      */
-    public void setConfig(String key, String value){
+    public void setValue(String key, String value){
         this.config.put(key, value);
     }
 

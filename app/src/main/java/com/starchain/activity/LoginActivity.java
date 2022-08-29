@@ -1,10 +1,12 @@
 package com.starchain.activity;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import androidx.annotation.RequiresApi;
 import com.starchain.R;
 import com.starchain.utils.Util_Pattern;
 
@@ -18,6 +20,7 @@ public class LoginActivity extends BaseActivity{
      * 定义页面初始化时的行为
      * @param savedInstanceState android.os.Bundle
      */
+    @RequiresApi(api = Build.VERSION_CODES.R)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

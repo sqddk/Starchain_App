@@ -15,10 +15,18 @@ public class ApplicationInformation {
     private ApplicationInformation(){}
     private String account; // 用户账号
 
+    /**
+     * 获取本机用户账号
+     * @return 账号
+     */
     public String getAccount(){
         return this.account;
     }
 
+    /**
+     * 设置本机用户账号
+     * @param account 账号
+     */
     public void setAccount(String account){
         this.account = account;
     }

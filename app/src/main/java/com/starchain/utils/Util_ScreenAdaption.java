@@ -31,19 +31,6 @@ public class Util_ScreenAdaption {
     }
 
     /**
-     * 设置webview和注册页的标题居中
-     * @param textview TextView
-     * @param this_page 当前页面对象
-     */
-    public static void set_title_center(TextView textview, AppCompatActivity this_page){
-        LinearLayout.LayoutParams linearParams =(LinearLayout.LayoutParams) textview.getLayoutParams();
-        DisplayMetrics dm = this_page.getResources().getDisplayMetrics();
-        int window_width = (int) (dm.widthPixels / dm.density);
-        linearParams.width = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, window_width - 58, dm);
-        textview.setLayoutParams(linearParams);
-    }
-
-    /**
      * 设置占据主要位置的scroll的高度，采用dp
      * @param scrollview ScrollView
      * @param this_page 当前页面对象

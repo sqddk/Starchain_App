@@ -16,6 +16,10 @@ public class BaseActivity extends AppCompatActivity {
     private EditText editText;
     protected int available_distance = 0;
 
+    /**
+     * 定义页面初始化时的行为
+     * @param savedInstanceState android.os.Bundle
+     */
     @RequiresApi(api = Build.VERSION_CODES.R)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
