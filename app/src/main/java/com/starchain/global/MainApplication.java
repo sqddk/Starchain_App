@@ -27,13 +27,13 @@ public class MainApplication extends Application {
      * 初始化全局操作的各类实例
      */
     private void initAllGlobalMembers(){
-        ResourceStorageCenter.init();
-        MessageReceiver.init();
-        ThemeManager.init();
-        ApplicationInformation.init();
-        ConfigureManager.init();
-        WebSocketManager.init();
-        HttpsClient.init();
+        ResourceStorageCenter.getInstance().initial();
+        MessageReceiver.getInstance().initial();
+        ThemeManager.getInstance().initial(this);
+        ApplicationInformation.getInstance().initial();
+        ConfigureManager.getInstance().loadConfig();
+        WebSocketManager.getInstance().initial("wss://hdudragonking.cn");
+        HttpsClient.getInstance().initial();
     }
 
     /**

@@ -7,13 +7,13 @@ public class ApplicationInformation {
     public static ApplicationInformation getInstance(){
         return ApplicationInformationHolder.INSTANCE;
     }
-    public static void init(){
-        getInstance();
-    }
 
 
     private ApplicationInformation(){}
     private String account; // 用户账号
+    private String password; // 用户密码
+
+    public void initial(){}
 
     /**
      * 获取本机用户账号
@@ -29,6 +29,22 @@ public class ApplicationInformation {
      */
     public void setAccount(String account){
         this.account = account;
+    }
+
+    /**
+     * 获取本机用户密码
+     * @return 密码
+     */
+    public String getPassword(){
+        return this.password;
+    }
+
+    /**
+     * 设置本机密码
+     * @param password 密码
+     */
+    public void setPassword(String password){
+        this.password = password;
     }
 
 }

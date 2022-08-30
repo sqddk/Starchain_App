@@ -11,14 +11,16 @@ public class ThemeManager {
     public static ThemeManager getInstance(){
         return ThemeManagerHolder.INSTANCE;
     }
-    public static void init(){
-        getInstance();
-    }
 
 
     private ThemeManager(){}
-    private final ResourceStorageCenter resourceStorageCenter = ResourceStorageCenter.getInstance();
-    private int themeColor = Resources.getSystem ().getColor(R.color.theme_color);
+    private ResourceStorageCenter resourceStorageCenter;
+    private int themeColor;
+
+    public void initial(MainApplication application){
+        this.resourceStorageCenter = ResourceStorageCenter.getInstance();
+        this.themeColor = application.getColor(R.color.theme_color);
+    }
 
     /**
      * 获取主题色

@@ -7,6 +7,8 @@ import com.kongzue.dialogx.dialogs.FullScreenDialog;
 import com.kongzue.dialogx.interfaces.OnBindView;
 import com.starchain.R;
 
+import java.util.Random;
+
 public class Util {
 
     /**
@@ -14,7 +16,7 @@ public class Util {
      * @param url 网址
      */
     public static void createWebScreen(String url){
-        FullScreenDialog.show(new OnBindView<FullScreenDialog>(R.layout.activity_webview) {
+        FullScreenDialog.show(new OnBindView<>(R.layout.activity_webview) {
             @SuppressLint("SetJavaScriptEnabled")
             @Override
             public void onBind(FullScreenDialog dialog, View v) {
@@ -35,6 +37,27 @@ public class Util {
                 });
             }
         });
+    }
+
+    /**
+     * 获取十位数的字母数字混合的String
+     * @return 混合字符串 (String)
+     */
+    public static String createRandomMixture(){
+        StringBuilder sb = new StringBuilder();
+        for(int i = 0;i < 10; i++){
+            Random random = new Random();
+            String charOrNum = random.nextInt(2) % 2 == 0 ? "char" : "num";
+            if(charOrNum.equals("char")){
+                int choice = random.nextInt(2) % 2 == 0 ? 65 : 97;
+                char val = (char)(choice + random.nextInt(26));
+                sb.append(val);
+            }else {
+                int num = random.nextInt(9);
+                sb.append(num);
+            }
+        }
+        return sb.toString();
     }
 
 }

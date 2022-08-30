@@ -12,9 +12,8 @@ public class UpdateManager {
     /**
      * 根据最新版本号和安装包下载地址进行升级
      * @param concurrentVersion 最新版本号
-     * @param updateURL 安装包下载地址
      */
-    public void tryUpdate(double concurrentVersion, String updateURL) {
+    public void tryUpdate(double concurrentVersion) {
 
     }
 }

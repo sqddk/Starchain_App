@@ -10,12 +10,13 @@ public class ResourceStorageCenter {
     public static ResourceStorageCenter getInstance(){
         return ResourceStorageCenterHolder.INSTANCE;
     }
-    public static void init(){
-        getInstance();
-    }
 
 
     private ResourceStorageCenter(){}
-    private final ConcurrentHashMap<String, ArrayList<?>> BucketsStore = new ConcurrentHashMap<>();
+    private ConcurrentHashMap<String, ArrayList<?>> BucketsStore;
+
+    public void initial(){
+        this.BucketsStore = new ConcurrentHashMap<>();
+    }
 
 }

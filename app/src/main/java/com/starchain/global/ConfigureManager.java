@@ -14,13 +14,10 @@ public class ConfigureManager {
     public static ConfigureManager getInstance(){
         return ConfigureManagerHolder.INSTANCE;
     }
-    public static void init(){
-        getInstance();
-    }
 
 
     private ConfigureManager(){
-        this.loadConfig();
+        this.config = new JSONObject();
     }
     private static final String NATIVE_CONFIGURE_PATH = "data/data/com.starchain/config.json";
     private JSONObject config;
@@ -28,7 +25,7 @@ public class ConfigureManager {
     /**
      * 初始化加载配置
      */
-    private void loadConfig(){
+    public void loadConfig(){
         File file = new File(NATIVE_CONFIGURE_PATH);
         if(file.exists()){
             try{

@@ -7,11 +7,9 @@ public class HttpsClient {
     public static HttpsClient getInstance(){
         return HttpsClientHolder.INSTANCE;
     }
-    public static void init(){
-        getInstance();
-    }
 
     private HttpsClient(){}
+    public void initial(){}
 
     /**
      * 发送https请求

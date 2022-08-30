@@ -9,13 +9,14 @@ public class MessageReceiver {
     public static MessageReceiver getInstance(){
         return MessageReceiverHolder.INSTANCE;
     }
-    public static void init(){
-        getInstance();
-    }
 
 
     private MessageReceiver(){}
-    private final ResourceStorageCenter resourceStorageCenter = ResourceStorageCenter.getInstance();
+    private ResourceStorageCenter resourceStorageCenter;
+
+    public void initial(){
+        this.resourceStorageCenter = ResourceStorageCenter.getInstance();
+    }
 
     /**
      * 处理来自服务端的主动推送信息

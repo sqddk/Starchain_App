@@ -21,8 +21,8 @@ public class WebSocketConnector extends WebSocketClient {
     }
 
     @Override
-    public void onOpen(ServerHandshake handshake_data) {
-
+    public void onOpen(ServerHandshake handshakeData) {
+        System.out.println("已成功和服务端建立websocket连接！");
     }
 
     @Override
@@ -44,7 +44,7 @@ public class WebSocketConnector extends WebSocketClient {
 
     @Override
     public void onError(Exception ex) {
-
+        throw new RuntimeException(ex);
     }
 
     public ConcurrentHashMap<String, JSONObject> getEventPool(){
